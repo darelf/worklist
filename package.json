@@ -1,0 +1,13 @@
+{
+  "name": "worklist",
+  "version": "0.0.1",
+  "description": "Keep track of what I worked on this week",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.6.0",
+    "yargs": "^1.2.1"
+  },
+  "bin": {
+    "worklist": "./bin/worklist.js"
+  }
+}
