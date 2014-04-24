@@ -21,5 +21,10 @@ next, I email that text file to my boss.
 
 See the code. It's a pretty simple script.
 
+#### Update
+I've changed the project to use [leveldb](https://github.com/rvagg/node-levelup).
+So now it stores all the data in a leveldb, and I use `worklist list` and pipe
+the results to a file in order to turn in my weekly reports.
+
 MIT license
 
