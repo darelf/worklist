@@ -10,16 +10,23 @@ function WorkList(opts) {
   if (!(self instanceof WorkList)) return new WorkList(opts)
   if (!opts) opts = {}
   self.name = process.env.HOME + '/worklist/worklist.db'
-  
   var m = moment()
   if (opts.weekly) {
     m = m.startOf('week').add('days', 1)
   }
   self.workDate = m.format('YYYY-MM-DD')
   
-  if (opts.dbname) self.name = opts.dbname
+  if (opts.dbname) {
+    if (opts.dbname === 'memory') {
+      self.db = sublevel(levelup({ db: require('memdown') }))
+    } else {
+      self.db = sublevel(levelup(self.name))
+    }
+    self.name = opts.dbname
+  } else {  
+    self.db = sublevel(levelup(self.name))
+  }
 
-  self.db = sublevel(levelup(self.name))
   self.list = self.db.sublevel('list')
 
   self.current = []

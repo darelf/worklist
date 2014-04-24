@@ -9,7 +9,8 @@
     "yargs": "^1.2.1",
     "level": "^0.18.0",
     "level-sublevel": "^5.2.0",
-    "monotonic-timestamp": "0.0.8"
+    "monotonic-timestamp": "0.0.8",
+    "memdown": "^0.7.1"
   },
   "bin": {
     "worklist": "./bin/worklist.js"

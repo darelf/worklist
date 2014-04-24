@@ -1,7 +1,7 @@
 var test = require('tape')
 
 var WorkList = require('../')
-var list = new WorkList({weekly: true})
+var list = new WorkList({weekly: true, dbname: 'memory'})
 
 test('create one entry, then delete it', function(t) {
   t.plan(4)
