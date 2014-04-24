@@ -1,6 +1,8 @@
 Worklist
 ========
 
+[![Build Status](https://travis-ci.org/darelf/worklist.svg)](https://travis-ci.org/darelf/worklist)
+
 `npm install worklist -g`
 
 Just a quick and dirty way to keep track of what I do
