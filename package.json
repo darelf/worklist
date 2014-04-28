@@ -7,10 +7,11 @@
   "dependencies": {
     "moment": "^2.6.0",
     "yargs": "^1.2.1",
-    "level": "^0.18.0",
     "level-sublevel": "^5.2.0",
     "monotonic-timestamp": "0.0.8",
-    "memdown": "^0.7.1"
+    "memdown": "^0.7.1",
+    "levelup": "^0.18.3",
+    "leveldown-prebuilt": "^0.10.2"
   },
   "bin": {
     "worklist": "./bin/worklist.js"

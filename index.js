@@ -1,4 +1,4 @@
-var levelup = require('level')
+var levelup = require('levelup')
 var sublevel = require('level-sublevel')
 var moment = require('moment')
 var timestamp = require('monotonic-timestamp')
@@ -20,11 +20,11 @@ function WorkList(opts) {
     if (opts.dbname === 'memory') {
       self.db = sublevel(levelup({ db: require('memdown') }))
     } else {
-      self.db = sublevel(levelup(self.name))
+      self.db = sublevel(levelup(self.name, {db: require('leveldown-prebuilt')}))
     }
     self.name = opts.dbname
   } else {  
-    self.db = sublevel(levelup(self.name))
+    self.db = sublevel(levelup(self.name, {db: require('leveldown-prebuilt')}))
   }
 
   self.list = self.db.sublevel('list')
