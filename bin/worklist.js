@@ -9,7 +9,6 @@ var m = moment()
 
 var list = new WorkList(defaults)
 
-
 function parseCommands() {
   if (argv._.indexOf('list') > -1) {
     list.getCurrentList(function(data) {
@@ -32,6 +31,5 @@ function parseCommands() {
     }
   }
 }
-
 
 parseCommands()
