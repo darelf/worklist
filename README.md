@@ -2,6 +2,7 @@ Worklist
 ========
 
 [![Build Status](https://travis-ci.org/darelf/worklist.svg)](https://travis-ci.org/darelf/worklist)
+[![NPM version](https://badge.fury.io/js/worklist.svg)](http://badge.fury.io/js/worklist)
 
 `npm install worklist -g`
 
