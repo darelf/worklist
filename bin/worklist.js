@@ -7,7 +7,7 @@ var defaults = { weekly: true, dbname: process.env.HOME + '/worklist/worklist.db
 var argv = require('yargs').boolean('weekly').default(defaults).alias('weekly', 'w').argv
 var m = moment()
 
-var list = new WorkList(defaults)
+var list = new WorkList(argv)
 
 function parseCommands() {
   if (argv._.indexOf('list') > -1) {

@@ -11,6 +11,9 @@ function WorkList(opts) {
   if (!opts) opts = {}
   self.name = process.env.HOME + '/worklist/worklist.db'
   var m = moment()
+  if (opts.workDate) {
+    m = moment(opts.workDate)
+  }
   if (opts.weekly) {
     m = m.startOf('week').add('days', 1)
   }
