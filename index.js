@@ -23,9 +23,9 @@ function WorkList(opts) {
     if (opts.dbname === 'memory') {
       self.db = sublevel(levelup({ db: require('memdown') }))
     } else {
+      self.name = opts.dbname
       self.db = sublevel(levelup(self.name, {db: require('leveldown-prebuilt')}))
     }
-    self.name = opts.dbname
   } else {  
     self.db = sublevel(levelup(self.name, {db: require('leveldown-prebuilt')}))
   }
